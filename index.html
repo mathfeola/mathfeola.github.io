@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Matheus Feola</title>
+    <meta name="description" content="Hello world! I&#x27;m Matheus and I currently live in São Paulo, Brazil. I have started working with software development in 2012 and earned my computer science degree from the University São Judas Tadeu in 2017, the same year that I made the transition from QA engineer to iOS development. Since that my work was done mostly at financial mobile projects such as banking apps, credit cards and digital wallets, but also in some others interesting projects like UI libraries, networking layers, etc. I have a passion for self-learning and am always looking for ways to improve my craft whilst enjoying the chance to work with talented and creative people." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Matheus Feola</h1>
+          <h2>iOS Developer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:matheusfeola@gmail.com">matheusfeola@gmail.com</a>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              +55 (11) 95482-1128
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href="http://matheusfeola.com">matheusfeola.com</a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Hello world! I'm Matheus and I currently live in São Paulo, Brazil. I have started working with software development in 2012 and earned my computer science degree from the University São Judas Tadeu in 2017, the same year that I made the transition from QA engineer to iOS development. Since that my work was done mostly at financial mobile projects such as banking apps, credit cards and digital wallets, but also in some others interesting projects like UI libraries, networking layers, etc. I have a passion for self-learning and am always looking for ways to improve my craft whilst enjoying the chance to work with talented and creative people.</p>
+          </article>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>C6 Bank</h4>
+                  <span>
+                    <time datetime="2021-06-01">Jun 2021</time> –
+                    <time datetime="2022-03-01">Mar 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>iOS Engineer</strong>
+                    <a href="https://www.c6bank.com.br">www.c6bank.com.br</a>
+                </div>
+              </header>
+                <p>C6 Bank is currently one of the biggest digital banks in Brazil, funded by JP Morgan, its main focus is to democratize the access to financial services while constantly creating innovative products. One of the biggest learnings I had in this last opportunity was working in an extremely modularized environment with almost 100 developers divided between teams taking care of features, pushes, networking and UI libraries, etc.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Refactor the entire module of rewards program, implementing a new layout, architecture and test suites.</li>
+                    <li>Develop the money transfer feature of an educational finance management app made for the children of bank account holders.</li>
+                    <li>Accessibility optimizations to help QA engineers execute their test suite and improve visually impaired&#x27;s experience.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Mercado Livre</h4>
+                  <span>
+                    <time datetime="2019-08-01">Aug 2019</time> –
+                    <time datetime="2021-05-20">May 2021</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>iOS Engineer</strong>
+                    <a href="https://www.mercadolivre.com.br">www.mercadolivre.com.br</a>
+                </div>
+              </header>
+                <p>Mercado Livre hosts the largest online commerce in Latin America. They have their own payment ecosystem which is present in more than 15 countries. That was my first experience working with a team located outside Brazil and speaking a different language.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Build a new bank payment slip feature for Brazil, Argentina and Chile.</li>
+                    <li>Configure a CI server for the development team.</li>
+                    <li>Improve the UI layer by removing legacy storyboards and replacing them with views done by code.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Concrete Solutions</h4>
+                  <span>
+                    <time datetime="2017-08-01">Aug 2017</time> –
+                    <time datetime="2019-08-20">Aug 2019</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>iOS Engineer</strong>
+                    <a href="https://www.youtube.com/user/concretesolutionsbr">www.youtube.com/user/concretesolutionsbr</a>
+                </div>
+              </header>
+                <p>In 2017 I missed developing new features and products like I used to do in my internship, so I made a transition from working as QA to iOS development inside the same company. Swift was becoming more stable, modern and common every year and I enjoyed very much since the first time I used it.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Learn about iOS project best practices for code and distributed team work.</li>
+                    <li>First contact with different architectures like MVVM, MVP, VIPER, etc.</li>
+                    <li>Objective-C legacy code refactor to Swift in a banking app.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Concrete Solutions</h4>
+                  <span>
+                    <time datetime="2015-04-01">Apr 2015</time> –
+                    <time datetime="2017-08-01">Aug 2017</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>QA Engineer</strong>
+                    <a href="https://www.youtube.com/user/concretesolutionsbr">www.youtube.com/user/concretesolutionsbr</a>
+                </div>
+              </header>
+                <p>Concrete Solutions is a consulting company focused on developing digital products and services with several clients across Latin America and it was acquired by Accenture in 2017. I started working with Quality Assurance since I already had some knowledge of ruby. I have participated in 6 different projects such as e-commerces, car-sharing and banking apps until I started to focus in iOS in 2017.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>I could learn a lot about Quality Assurance theory, different kinds of tests like unit, functional, acceptance, load, stress, regression, writing Behaviour Driven Development specs, using test pyramid to define a quality strategy for a project.</li>
+                    <li>Working with Ruby, Appium, Calabash, Cucumber and first contact with espresso and Quick/Nimble.</li>
+                    <li>Configure CI pipelines using Fastlane with Jenkins (inside projects requiring higher security) or Travis (company tools).</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University São Judas Tadeu</h4>
+                  <span>
+                    <time datetime="2011-02-01">Feb 2011</time> –
+                    <time datetime="2017-12-01">Dec 2017</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                    <a href="https://www.usjt.br">www.usjt.br</a>
+                </div>
+              </header>
+                <p>Bachelor</p>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>iOS Development</h4>
+                <ul class="tag-list">
+                    <li>Swift</li>
+                    <li>UIKit and views done by code</li>
+                    <li>Quick/Nimble and Snapshot testing</li>
+                    <li>Dependency managers</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Quality Assurance</h4>
+                <ul class="tag-list">
+                    <li>Continuous integration</li>
+                    <li>Test automation with Appium</li>
+                    <li>Behavior Driven Development</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Portuguese</h4>
+              Native speaker
+            </div>
+            <div>
+                <h4>English</h4>
+              Intermediate
+            </div>
+            <div>
+                <h4>Spanish</h4>
+              Intermediate
+            </div>
+        </div>
+      </section>
+  </body>
+</html>
